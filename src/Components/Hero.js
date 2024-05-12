@@ -36,14 +36,14 @@ function Hero() {
     <div className="section-container">
       <div className="hero-section">
         <div className="text-section">
-          <p className="text-headline">❤️ Health comes first</p>
+          <p className="text-headline">❓ Need Medical Advice?</p>
           <h2 className="text-title">
-            Find your Doctor and make an Appointments
+            Get answers to your medical queries
           </h2>
           <p className="text-descritpion">
-            Talk to online doctors and get medical advice, online prescriptions,
-            refills and medical notes within minutes. On-demand healthcare
-            services at your fingertips.
+            Talk to online doctors and get expert medical advice, answers to your queries,
+            and information about various medical conditions. Our team of experienced doctors
+            are here to help you with your health concerns.
           </p>
           <button
             className="text-appointment-btn"
@@ -64,8 +64,8 @@ function Hero() {
             </div>
 
             <div className="text-stats-container">
-              <p>10+</p>
-              <p>Years of Experience</p>
+              <p>5+</p>
+              <p>LLM powered agents</p>
             </div>
           </div>
         </div>

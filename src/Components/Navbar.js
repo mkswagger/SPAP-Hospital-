@@ -17,8 +17,29 @@ function Navbar() {
     setNav(!nav);
   };
 
+  // const handleChatBtnClick = () => {
+  //   if (!isButtonDisabled) {
+  //     toast.info("Experiencing high traffic, Please wait a moment.", {
+  //       position: toast.POSITION.TOP_CENTER,
+  //       onOpen: () => setIsButtonDisabled(true),
+  //       onClose: () => setIsButtonDisabled(false),
+  //     });
+  //   }
+  // };
+
   const handleChatBtnClick = () => {
     if (!isButtonDisabled) {
+      // Load the chatbot scripts
+      const script1 = document.createElement("script");
+      script1.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
+      document.body.appendChild(script1);
+  
+      const script2 = document.createElement("script");
+      script2.src = "https://mediafiles.botpress.cloud/dbc0f391-0a8f-42a2-a1e1-0ce070b63e87/webchat/config.js";
+      script2.defer = true;
+      document.body.appendChild(script2);
+  
+      // Display the toast notification
       toast.info("Experiencing high traffic, Please wait a moment.", {
         position: toast.POSITION.TOP_CENTER,
         onOpen: () => setIsButtonDisabled(true),
@@ -26,12 +47,11 @@ function Navbar() {
       });
     }
   };
-
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          Hospital<span className="navbar-sign">+</span>
         </Link>
       </h1>
 
